@@ -1,0 +1,140 @@
+.navbar {
+  background-color: rgb(94, 241, 167); 
+  padding: 10px 25px; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  position: fixed;
+}
+
+.form-inline{
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+.navbar-brand img {
+  height: 80px; 
+}
+
+.navbar-nav .nav-item {
+  margin-right: 15px; 
+}
+
+.navbar-nav .nav-link {
+  color: white; 
+}
+
+.navbar-nav .nav-link:hover {
+  color: lightgray; 
+}
+
+.hero {
+  position: relative;
+}
+
+.hero-content {
+  position: relative;
+  width: 100%;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white; /* Adjust text color */
+}
+
+.hero-text h1 {
+  font-size: 3rem; /* Adjust font size for h1 */
+}
+
+.hero-text p {
+  font-size: 1.5rem; /* Adjust font size for p */
+  margin-bottom: 20px; /* Add margin below paragraph */
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 20px; /* Adjust margin for CTA button */
+  padding: 10px 20px;
+  background-color: #28a745; /* Button background color */
+  color: #fff; /* Button text color */
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #218838; /* Button background color on hover */
+}
+
+.collapse navbar-collapse{
+  display: inline-block;
+  margin-top: 20px; 
+  padding: 10px 20px;
+  background-color: #09f644; 
+  color: #0f0f0f; 
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+
+
+.hero {
+  color: #09f644;
+  padding-top: 100px; 
+}
+
+.hero-content {
+  text-align: center; 
+}
+
+.hero-text{
+  color: #0b0101;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 20px; 
+  padding: 10px 20px;
+  background-color: #07ec40; 
+  color: #0b0101; 
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #218838; /* Button background color on hover */
+}
+
+.featured-products {
+  text-align: center; /* Center text in featured products section */
+  padding: 50px 0; /* Add padding to top and bottom of section */
+}
+
+.product-categories {
+  text-align: center; /* Center product categories */
+  padding: 50px 0; /* Add padding to top and bottom of section */
+}
+
+.product-categories img {
+  margin-bottom: 20px; /* Add margin between product images */
+}
+
+
+.product-categories{
+  position:relative;
+}
+
+.product-listings,
+.product-details,
+.shopping-cart,
+.checkout,
+.user-account,
+.contact-us,
+.additional-features {
+  /* Style for other sections can be added as needed */
+}

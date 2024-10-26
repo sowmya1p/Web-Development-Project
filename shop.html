@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farmers' Market</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #060c05;
+    }
+    .container {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #f1f2f3;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .product {
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    .product label {
+        font-weight: bold;
+    }
+    .product img {
+        width: 100px;
+        height: auto;
+        border-radius: 5px;
+        float: right; 
+        margin-left: 10px; 
+    }
+    .product input[type="number"] {
+        width: 50px;
+    }
+    .product button {
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .product button:hover {
+        background-color: #45a049;
+    }
+    #buyNowBtn {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    #buyNowBtn:hover {
+        background-color: #0056b3;
+    }
+    #cart {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEwozkfk7R0LKUNWyIIMqafNf7DOEEGKbgfMu2Ep5RSQ&s" alt="Organic Apples">
+        <h2>Organic Apples</h2>
+        <label for="apples_quantity">Quantity:</label>
+        <input type="number" id="apples_quantity" name="apples_quantity" value="0" min="0">
+    </div>
+
+    <div class="product">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfuWxZu6reSAq06p6qWVCC8p6Aw7JDnJnG6GPMxMV2XA&s" alt="Free-range Eggs">
+        <h2>Organic Cabbages</h2>
+        <label for="Cabbages_quantity">Quantity:</label>
+        <input type="number" id="Cabbages_quantity" name="cabbages_quantity" value="0" min="0">
+    </div>
+
+    <div class="product">
+        <img src="https://images.pexels.com/photos/533280/pexels-photo-533280.jpeg?cs=srgb&dl=pexels-pixabay-533280.jpg&fm=jpg" alt="Organic Tomatoes">
+        <h2>Organic Tomatoes</h2>
+        <label for="tomatoes_quantity">Quantity:</label>
+        <input type="number" id="tomatoes_quantity" name="tomatoes_quantity" value="0" min="0">
+    </div>
+
+    <div class="product">
+        <img src="https://media.istockphoto.com/id/185275579/photo/bundles-of-organic-carrots-with-the-stems-still-attached.jpg?s=612x612&w=is&k=20&c=5rm8pL-758IGns8jDBd4dEqxeh4RrMJZqS_D9IFF0F8=" alt="Fresh Carrots">
+        <h2>Fresh Carrots</h2>
+        <label for="carrots_quantity">Quantity:</label>
+        <input type="number" id="carrots_quantity" name="carrots_quantity" value="0" min="0">
+    </div>
+
+    <div class="product">
+        <img src="https://as1.ftcdn.net/v2/jpg/00/93/29/62/1000_F_93296270_kbNqIdz96kJYCPJ5dYqHSqZP5H7tmYvN.jpg" alt="Organic Milk">
+        <h2>Organic Brinjal</h2>
+        <label for="brinjal_quantity">Quantity:</label>
+        <input type="number" id="brinjal_quantity" name="brinjal_quantity" value="0" min="0">
+    </div>
+
+    <button id="buyNowBtn" onclick="buyNow()">Buy Now</button>
+    <div id="cart"></div>
+</div>
+
+<script>
+    function buyNow() {
+        var cartContent = '<h3>Cart Contents:</h3>';
+        var products = document.querySelectorAll('.product');
+        products.forEach(function(product) {
+            var name = product.querySelector('h2').innerText;
+            var quantity = parseInt(product.querySelector('input[type="number"]').value);
+            if (quantity > 0) {
+                cartContent += '<p>' + quantity + ' ' + name + '</p>';
+            }
+        });
+        document.getElementById('cart').innerHTML = cartContent;
+    }
+</script>
+
+</body>
+</html>
